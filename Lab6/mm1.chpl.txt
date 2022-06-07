@@ -1,0 +1,41 @@
+//-----------------------------------------------------------------------------
+// Program code for CS 415/515 Parallel Programming, Portland State University.
+//-----------------------------------------------------------------------------
+// Array operations
+//
+config const N = 8;
+var i = 1;
+var j = 1;
+var k = 1;
+var total = 0;
+var a: [1..N, 1..N] int, b: [1..N, 1..N] int, c: [1..N, 1..N] int;
+writeln("Matrix-Multi:");
+writeln(N);
+
+for i in 1..N do{
+        for j in 1..N do{
+                a(i,j) = i + j + 2;
+                b(i,j) = j + 1;
+
+}
+}
+
+for i in 1..N do {
+        for j in 1..N do {
+                c(i,j) = 0;
+        for k in 1..N do {
+        c(i,j) += a(i,k) * b(k,j);
+}
+}
+}
+
+  for i in 1..N do {
+    for j in 1..N do {
+      total += c(i,j);
+    }
+  }
+
+writeln("Total:");
+writeln(total);
+writeln("N:");
+writeln(N);

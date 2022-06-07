@@ -1,0 +1,42 @@
+//-----------------------------------------------------------------------------
+// Program code for CS 415/515 Parallel Programming, Portland State University.
+//-----------------------------------------------------------------------------
+// Array operations
+//
+config const INIT_BALANCE = 1000;
+config const NUM_DEPOSITS = 10;
+config const NUM_WITHDRAWS = 10;
+config const DEPOSIT_AMT = 100;
+config const WITHDRAW_AMT = 200;
+var total = 0;
+
+proc deposit(i)
+{
+  var amount = mod(rand(),DEPOSIT_AMT);
+  var oldtotal = total;
+  total += amount;
+  printf("Deposit-%i %5i (%3i -> %3i)\n", i, amount, oldtotal, total);
+}
+
+proc withdraw(i)
+{
+  var amount = mod(rand(), WITHDRAW_AMT);
+  var oldtotal = total;
+  if (amount < total) {
+    total -= amount;
+    printf("Withdraw-%i %4i (%3i -> %3i)\n", i, amount, oldtotal, total);
+  } else {
+    printf("Withdraw-%i %4i (%3i) **aborted**\n", i, amount, oldtotal);
+  }
+}
+
+proc main(args: [] string) {
+total = INIT_BALANCE;
+  srand(time(NULL));
+  for i in 1..NUM_DEPOSITS do{
+    deposit(i);
+}
+  for i in 1..NUM_WITHDRAWS do {
+    withdraw(i);
+}
+}

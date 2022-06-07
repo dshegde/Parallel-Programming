@@ -1,0 +1,47 @@
+//-----------------------------------------------------------------------------
+// Program code for CS 415/515 Parallel Programming, Portland State University.
+//-----------------------------------------------------------------------------
+
+// Array operations
+//
+config const n = 8;
+var front_idx = 1;
+var back_idx = 1;
+var a: [1..n] int, reverse: [1..n] int, shuffle: [1..n] int;
+var odd: [1..n/2] int, even: [1..n/2] int, front: [1..n/2] int, back: [1..n/2] int;
+a = [i in 1..n] i;
+writeln("a:");
+writeln(a);
+
+odd = a[1..n by 2];
+even = a[2..n by 2];
+writeln("odd:");
+writeln(odd);
+writeln("even:");
+writeln(even);
+
+front = a[1..n/2];
+back = a[n/2+1..n];
+writeln("front:");
+writeln(front);
+writeln("back:");
+writeln(back);
+
+reverse = a[n..1 by -1];
+writeln("reverse:");
+writeln(reverse);
+
+for i in 1..n {
+        if (mod(i,2) == 0) then
+{
+                shuffle(i) = back(back_idx);
+                back_idx = back_idx + 1;
+}
+        else {
+                shuffle(i) = front(front_idx);
+                front_idx = front_idx + 1;
+}
+
+}
+writeln("Shuffle:");
+writeln(shuffle);
