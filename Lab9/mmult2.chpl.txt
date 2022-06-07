@@ -1,0 +1,41 @@
+//-----------------------------------------------------------------------------
+// Program code for CS 415/515 Parallel Programming, Portland State University.
+//-----------------------------------------------------------------------------
+
+// Matrix multiplication (shared-memory version)
+//  - approach 1: with loops
+//  - approach 2: with reduce
+//
+
+use BlockDist;
+
+config const N = 8;
+var D = {1..N, 1..N};
+const D2 = D dmapped Block(D);
+//var a, b, c, d: [D2] int;
+var a: [D2] int;
+var b: [D2] int;
+var c: [D2] int;
+var d: [D2] int;
+
+// initialization
+a = [(i,j) in D2] i + j;
+b = [(i,j) in D2] j;
+c = 0;
+d = 0;
+
+write("Locale:");
+for (i,j) in c.domain do
+writef("%2i", c(i,j).locale.id);
+writeln();
+
+// approach 1
+forall (i,j) in D2 do
+  for k in 1..N do
+    c(i,j) += a(i,k) * b(k,j);
+
+// approach 2
+d = [(i,j) in D2] + reduce [k in 1..N] a(i,k) * b(k,j);
+
+writeln("total = ", + reduce c);
+writeln("total = ", + reduce d);

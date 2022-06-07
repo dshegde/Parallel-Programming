@@ -1,0 +1,52 @@
+//-----------------------------------------------------------------------------
+// Program code for CS 415/515 Parallel Programming, Portland State University.
+//-----------------------------------------------------------------------------
+
+// Jacobi iteration (shared-memory version)
+//
+
+config const N = 8;
+const D = {1..N, 1..N};
+const PD = D.expand(1,1);      // padded domain
+var a:[PD] real; // two buffers for a
+
+// formatted 2D array printing
+proc print(a:[]) {
+  for i in a.domain.dim(0) {
+    for j in a.domain.dim(1) do
+      writef("%5.2dr", a[i,j]);
+    writeln();
+  }
+}
+
+// initialize boundary conditions
+a[PD.dim(0), 0] = 1.0;
+a[0, PD.dim(1)] = 2.0;
+writeln("Init:");
+print(a);
+
+config const epsilon = 0.01;  // convergence tolerance
+config const verbose = false; // printing control
+
+
+var flag1: bool = false;
+var flag2: bool = false;
+var t = 0;           // iteration count
+do {
+flag1 = false;
+flag2 = false;
+  forall ij in D with (ref flag1, ref flag2) do{  // no need to update padded elements
+
+        var temp: real = a[ij];
+        a[ij] = (a[ij+(0,1)]+a[ij+(0,-1)]+a[ij+(1,0)]+a[ij+(-1,0)])/4.0;
+        var delta = abs(temp - a[ij]);
+        if (delta < epsilon) {
+                flag1 = true; }
+        else {
+                flag2 = true;}
+}
+t += 1;
+} while (!(flag1 && !flag2));
+
+writeln("Result: t=", t);
+print(a);
