@@ -1,0 +1,32 @@
+// A producer-consumer program using the cqueue module
+//
+// Version 1: Base version: single producer and single consumer
+//
+
+use cqueue;
+
+config const numItems = 32;
+
+proc producer() {
+
+        forall i in 1..numItems
+        {
+                var idx = cqueue.add(i);
+                writeln("Producer added ",i," to buf[", idx, "]");
+        }
+}
+
+proc consumer() {
+        forall i in 1..numItems
+        {
+                var x = cqueue.remove();
+                writeln("Consumer removed ",x[1], " to buf[", x[0], "]");
+        }
+}
+
+proc main() {
+  cobegin {
+    producer();
+    consumer();
+  }
+}

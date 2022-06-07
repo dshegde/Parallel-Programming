@@ -1,0 +1,42 @@
+// A producer-consumer program using the cqueue module
+//
+// Version 1: Base version: single producer and single consumer
+//
+
+use cqueue;
+
+config const numItems = 32;
+config const numCons = 2;
+var count$: sync int = 0;
+
+proc producer() {
+
+        forall i in 1..numItems do
+        {
+                var idx = cqueue.add(i);
+                writeln("Producer added ",i," to buf[", idx, "]");
+        }
+}
+
+proc consumer(tid) {
+
+                while(1) {
+                        var temp = count$.readFE();
+                        count$.writeEF(temp+1);
+                        if ( temp < numItems) {
+                                var x = cqueue.remove();
+                                writeln("Consumer[",tid,"] removed ",x[1], " to buf[", x[0], "]");
+                        } else {
+                                break;
+                        }
+
+        }
+}
+
+proc main() {
+  cobegin {
+    producer();
+    coforall tid in 1..numCons do
+        consumer(tid);
+  }
+}
