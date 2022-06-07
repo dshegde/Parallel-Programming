@@ -1,0 +1,145 @@
+---------------------------
+---------------------------
+prime (1 threads) over [2..1000] starting ...
+prime (1 threads) found 168 primes in 0.092386 ms
+---------------------------
+---------------------------
+prime (2 threads) over [2..1000] starting ...
+prime (2 threads) found 168 primes in 0.335807 ms
+---------------------------
+---------------------------
+prime (4 threads) over [2..1000] starting ...
+prime (4 threads) found 168 primes in 0.693732 ms
+---------------------------
+---------------------------
+prime (8 threads) over [2..1000] starting ...
+prime (8 threads) found 168 primes in 1.13496 ms
+---------------------------
+---------------------------
+prime (16 threads) over [2..1000] starting ...
+prime (16 threads) found 168 primes in 1.36906 ms
+---------------------------
+---------------------------
+prime (32 threads) over [2..1000] starting ...
+prime (32 threads) found 168 primes in 2.58683 ms
+---------------------------
+---------------------------
+prime (64 threads) over [2..1000] starting ...
+prime (64 threads) found 168 primes in 16.2239 ms
+---------------------------
+---------------------------
+prime (128 threads) over [2..1000] starting ...
+prime (128 threads) found 168 primes in 30.9465 ms
+---------------------------
+---------------------------
+prime (1 threads) over [2..10000] starting ...
+prime (1 threads) found 1229 primes in 0.416076 ms
+---------------------------
+---------------------------
+prime (2 threads) over [2..10000] starting ...
+prime (2 threads) found 1229 primes in 0.87485 ms
+---------------------------
+---------------------------
+prime (4 threads) over [2..10000] starting ...
+prime (4 threads) found 1229 primes in 1.56096 ms
+---------------------------
+---------------------------
+prime (8 threads) over [2..10000] starting ...
+prime (8 threads) found 1229 primes in 2.11571 ms
+---------------------------
+---------------------------
+prime (16 threads) over [2..10000] starting ...
+prime (16 threads) found 1229 primes in 2.69141 ms
+---------------------------
+---------------------------
+prime (32 threads) over [2..10000] starting ...
+prime (32 threads) found 1229 primes in 5.24386 ms
+---------------------------
+---------------------------
+prime (64 threads) over [2..10000] starting ...
+prime (64 threads) found 1229 primes in 31.4217 ms
+---------------------------
+---------------------------
+prime (128 threads) over [2..10000] starting ...
+prime (128 threads) found 1229 primes in 54.5021 ms
+---------------------------
+---------------------------
+prime (1 threads) over [2..100000] starting ...
+prime (1 threads) found 9592 primes in 3.30706 ms
+---------------------------
+---------------------------
+prime (2 threads) over [2..100000] starting ...
+prime (2 threads) found 9592 primes in 4.86672 ms
+---------------------------
+---------------------------
+prime (4 threads) over [2..100000] starting ...
+prime (4 threads) found 9592 primes in 6.14614 ms
+---------------------------
+---------------------------
+prime (8 threads) over [2..100000] starting ...
+prime (8 threads) found 9592 primes in 9.17359 ms
+---------------------------
+---------------------------
+prime (16 threads) over [2..100000] starting ...
+prime (16 threads) found 9592 primes in 10.2477 ms
+---------------------------
+---------------------------
+prime (32 threads) over [2..100000] starting ...
+prime (32 threads) found 9592 primes in 14.4481 ms
+---------------------------
+---------------------------
+prime (64 threads) over [2..100000] starting ...
+prime (64 threads) found 9592 primes in 77.6367 ms
+---------------------------
+---------------------------
+prime (128 threads) over [2..100000] starting ...
+prime (128 threads) found 9592 primes in 123.61 ms
+---------------------------
+---------------------------
+prime (1 threads) over [2..1000000] starting ...
+prime (1 threads) found 78498 primes in 15.287 ms
+---------------------------
+---------------------------
+prime (2 threads) over [2..1000000] starting ...
+prime (2 threads) found 78498 primes in 34.2214 ms
+---------------------------
+---------------------------
+prime (4 threads) over [2..1000000] starting ...
+prime (4 threads) found 78498 primes in 37.6691 ms
+---------------------------
+---------------------------
+prime (8 threads) over [2..1000000] starting ...
+prime (8 threads) found 78498 primes in 49.0862 ms
+---------------------------
+---------------------------
+prime (16 threads) over [2..1000000] starting ...
+prime (16 threads) found 78498 primes in 59.4119 ms
+---------------------------
+---------------------------
+prime (32 threads) over [2..1000000] starting ...
+prime (32 threads) found 78498 primes in 71.3691 ms
+---------------------------
+---------------------------
+prime (64 threads) over [2..1000000] starting ...
+prime (64 threads) found 78498 primes in 191.377 ms
+---------------------------
+---------------------------
+prime (128 threads) over [2..1000000] starting ...
+prime (128 threads) found 78498 primes in 324.263 ms
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------

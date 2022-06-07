@@ -1,0 +1,279 @@
+---------------------------
+---------------------------
+prime (1 threads) over [2..1000] starting ...
+Elapsed time is: 0.814836 ms
+prime (1 threads) found 168 primes
+---------------------------
+---------------------------
+prime (2 threads) over [2..1000] starting ...
+Elapsed time is: 0.713255 ms
+prime (2 threads) found 168 primes
+---------------------------
+---------------------------
+prime (4 threads) over [2..1000] starting ...
+Elapsed time is: 0.768403 ms
+prime (4 threads) found 168 primes
+---------------------------
+---------------------------
+prime (8 threads) over [2..1000] starting ...
+Elapsed time is: 2.428097 ms
+prime (8 threads) found 168 primes
+---------------------------
+---------------------------
+prime (16 threads) over [2..1000] starting ...
+Elapsed time is: 4.900079 ms
+prime (16 threads) found 168 primes
+---------------------------
+---------------------------
+prime (32 threads) over [2..1000] starting ...
+Elapsed time is: 12.815256 ms
+prime (32 threads) found 168 primes
+---------------------------
+---------------------------
+prime (64 threads) over [2..1000] starting ...
+Elapsed time is: 15.044042 ms
+prime (64 threads) found 168 primes
+---------------------------
+---------------------------
+prime (128 threads) over [2..1000] starting ...
+Elapsed time is: 23.106351 ms
+prime (128 threads) found 168 primes
+---------------------------
+---------------------------
+prime (1 threads) over [2..10000] starting ...
+Elapsed time is: 0.912558 ms
+prime (1 threads) found 1229 primes
+---------------------------
+---------------------------
+prime (2 threads) over [2..10000] starting ...
+Elapsed time is: 1.205696 ms
+prime (2 threads) found 1229 primes
+---------------------------
+---------------------------
+prime (4 threads) over [2..10000] starting ...
+Elapsed time is: 1.551533 ms
+prime (4 threads) found 1229 primes
+---------------------------
+---------------------------
+prime (8 threads) over [2..10000] starting ...
+Elapsed time is: 3.537914 ms
+prime (8 threads) found 1229 primes
+---------------------------
+---------------------------
+prime (16 threads) over [2..10000] starting ...
+Elapsed time is: 4.380404 ms
+prime (16 threads) found 1229 primes
+---------------------------
+---------------------------
+prime (32 threads) over [2..10000] starting ...
+Elapsed time is: 9.916954 ms
+prime (32 threads) found 1229 primes
+---------------------------
+---------------------------
+prime (64 threads) over [2..10000] starting ...
+Elapsed time is: 16.799604 ms
+prime (64 threads) found 1229 primes
+---------------------------
+---------------------------
+prime (128 threads) over [2..10000] starting ...
+Elapsed time is: 30.492421 ms
+prime (128 threads) found 1229 primes
+---------------------------
+---------------------------
+prime (1 threads) over [2..100000] starting ...
+Elapsed time is: 4.772574 ms
+prime (1 threads) found 9592 primes
+---------------------------
+---------------------------
+prime (2 threads) over [2..100000] starting ...
+Elapsed time is: 5.728016 ms
+prime (2 threads) found 9592 primes
+---------------------------
+---------------------------
+prime (4 threads) over [2..100000] starting ...
+Elapsed time is: 7.663775 ms
+prime (4 threads) found 9592 primes
+---------------------------
+---------------------------
+prime (8 threads) over [2..100000] starting ...
+Elapsed time is: 10.510136 ms
+prime (8 threads) found 9592 primes
+---------------------------
+---------------------------
+prime (16 threads) over [2..100000] starting ...
+Elapsed time is: 14.519436 ms
+prime (16 threads) found 9592 primes
+---------------------------
+---------------------------
+prime (32 threads) over [2..100000] starting ...
+Elapsed time is: 17.960556 ms
+prime (32 threads) found 9592 primes
+---------------------------
+---------------------------
+prime (64 threads) over [2..100000] starting ...
+Elapsed time is: 33.149062 ms
+prime (64 threads) found 9592 primes
+---------------------------
+---------------------------
+prime (128 threads) over [2..100000] starting ...
+Elapsed time is: 51.287556 ms
+prime (128 threads) found 9592 primes
+---------------------------
+---------------------------
+prime (1 threads) over [2..1000000] starting ...
+Elapsed time is: 25.313088 ms
+prime (1 threads) found 78498 primes
+---------------------------
+---------------------------
+prime (2 threads) over [2..1000000] starting ...
+Elapsed time is: 37.812113 ms
+prime (2 threads) found 78498 primes
+---------------------------
+---------------------------
+prime (4 threads) over [2..1000000] starting ...
+Elapsed time is: 35.968322 ms
+prime (4 threads) found 78498 primes
+---------------------------
+---------------------------
+prime (8 threads) over [2..1000000] starting ...
+Elapsed time is: 52.001109 ms
+prime (8 threads) found 78498 primes
+---------------------------
+---------------------------
+prime (16 threads) over [2..1000000] starting ...
+Elapsed time is: 41.871325 ms
+prime (16 threads) found 78498 primes
+---------------------------
+---------------------------
+prime (32 threads) over [2..1000000] starting ...
+Elapsed time is: 42.435011 ms
+prime (32 threads) found 78498 primes
+---------------------------
+---------------------------
+prime (64 threads) over [2..1000000] starting ...
+Elapsed time is: 77.459125 ms
+prime (64 threads) found 78498 primes
+---------------------------
+---------------------------
+prime (128 threads) over [2..1000000] starting ...
+Elapsed time is: 130.087250 ms
+prime (128 threads) found 78498 primes
+---------------------------
+---------------------------
+prime (1 threads) over [2..10000000] starting ...
+Elapsed time is: 268.965790 ms
+prime (1 threads) found 664579 primes
+---------------------------
+---------------------------
+prime (2 threads) over [2..10000000] starting ...
+Elapsed time is: 257.343251 ms
+prime (2 threads) found 664579 primes
+---------------------------
+---------------------------
+prime (4 threads) over [2..10000000] starting ...
+Elapsed time is: 278.473433 ms
+prime (4 threads) found 664579 primes
+---------------------------
+---------------------------
+prime (8 threads) over [2..10000000] starting ...
+Elapsed time is: 317.918613 ms
+prime (8 threads) found 664579 primes
+---------------------------
+---------------------------
+prime (16 threads) over [2..10000000] starting ...
+Elapsed time is: 266.342983 ms
+prime (16 threads) found 664579 primes
+---------------------------
+---------------------------
+prime (32 threads) over [2..10000000] starting ...
+Elapsed time is: 248.294451 ms
+prime (32 threads) found 664579 primes
+---------------------------
+---------------------------
+prime (64 threads) over [2..10000000] starting ...
+Elapsed time is: 275.284934 ms
+prime (64 threads) found 664579 primes
+---------------------------
+---------------------------
+prime (128 threads) over [2..10000000] starting ...
+Elapsed time is: 433.943462 ms
+prime (128 threads) found 664579 primes
+---------------------------
+---------------------------
+prime (1 threads) over [2..100000000] starting ...
+Elapsed time is: 3106.155667 ms
+prime (1 threads) found 5761455 primes
+---------------------------
+---------------------------
+prime (2 threads) over [2..100000000] starting ...
+Elapsed time is: 2474.927741 ms
+prime (2 threads) found 5761455 primes
+---------------------------
+---------------------------
+prime (4 threads) over [2..100000000] starting ...
+Elapsed time is: 2292.555463 ms
+prime (4 threads) found 5761455 primes
+---------------------------
+---------------------------
+prime (8 threads) over [2..100000000] starting ...
+Elapsed time is: 2907.649269 ms
+prime (8 threads) found 5761455 primes
+prime (16 threads) over [2..100000000] starting ...
+Elapsed time is: 2120.027309 ms
+prime (16 threads) found 5761455 primes
+---------------------------
+---------------------------
+prime (32 threads) over [2..100000000] starting ...
+Elapsed time is: 2008.505382 ms
+prime (32 threads) found 5761455 primes
+---------------------------
+---------------------------
+prime (64 threads) over [2..100000000] starting ...
+Elapsed time is: 2160.285283 ms
+prime (64 threads) found 5761455 primes
+---------------------------
+---------------------------
+prime (128 threads) over [2..100000000] starting ...
+Elapsed time is: 2209.411099 ms
+prime (128 threads) found 5761455 primes
+---------------------------
+---------------------------
+prime (1 threads) over [2..1000000000] starting ...
+Elapsed time is: 36014.157391 ms
+prime (1 threads) found 50847534 primes
+---------------------------
+---------------------------
+prime (2 threads) over [2..1000000000] starting ...
+Elapsed time is: 25128.810871 ms
+prime (2 threads) found 50847534 primes
+---------------------------
+---------------------------
+prime (4 threads) over [2..1000000000] starting ...
+Elapsed time is: 24625.375986 ms
+prime (4 threads) found 50847534 primes
+---------------------------
+---------------------------
+prime (8 threads) over [2..1000000000] starting ...
+Elapsed time is: 26720.081643 ms
+prime (8 threads) found 50847534 primes
+---------------------------
+---------------------------
+prime (16 threads) over [2..1000000000] starting ...
+Elapsed time is: 21085.447864 ms
+prime (16 threads) found 50847534 primes
+---------------------------
+---------------------------
+prime (32 threads) over [2..1000000000] starting ...
+Elapsed time is: 18339.096402 ms
+prime (32 threads) found 50847534 primes
+---------------------------
+---------------------------
+prime (64 threads) over [2..1000000000] starting ...
+Elapsed time is: 20339.480963 ms
+prime (64 threads) found 50847534 primes
+---------------------------
+---------------------------
+prime (128 threads) over [2..1000000000] starting ...
+Elapsed time is: 20766.056390 ms
+prime (128 threads) found 50847534 primes
+---------------------------
