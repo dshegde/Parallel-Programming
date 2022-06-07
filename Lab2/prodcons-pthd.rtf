@@ -1,0 +1,72 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 //-----------------------------------------------------------------------------\
+// Program code for CS 415P/515 Parallel Programming, Portland State University\
+//-----------------------------------------------------------------------------\
+\
+// A Pthread producer-consumer program.\
+//\
+//\
+#include <stdio.h>\
+#include <pthread.h>\
+\
+#define BUFSIZE  20\
+#define NUMITEMS 100\
+\
+int buffer[BUFSIZE];\
+int idx = 0;\
+pthread_cond_t cons;\
+pthread_cond_t prod;\
+pthread_mutex_t mtx;\
+\
+void producer() \{\
+  printf("Producer starting\\n");\
+  /*while (idx == BUFSIZE)\
+        ; // busy waiting*/\
+\
+  for (int i = 1; i <= NUMITEMS; i++) \{\
+    pthread_mutex_lock (&mtx);\
+    while(idx == BUFSIZE)\
+            pthread_cond_wait(&prod, &mtx);\
+\
+    buffer[idx++] = i;\
+    printf("Producer added %d (bsz: %d)\\n", i, idx);\
+   pthread_mutex_unlock(&mtx);\
+  pthread_cond_signal (&cons);\
+  \}\
+  printf("Producer ending\\n");\
+\}\
+\
+void consumer() \{\
+  printf("Consumer starting\\n");\
+  /*while (idx == 0)\
+        ; // busy waiting*/\
+  for (int i = 1; i <= NUMITEMS; i++) \{\
+    pthread_mutex_lock (&mtx);\
+    while (idx == 0)\
+            pthread_cond_wait (&cons, &mtx);\
+\
+    int val = buffer[--idx];\
+    printf("Consumer rem'd %d (bsz: %d)\\n", val, idx);\
+   pthread_mutex_unlock (&mtx);\
+   pthread_cond_signal (&prod);\
+  \}\
+  printf("Consumer ending\\n");\
+\}\
+\
+int main(int argc, char **argv) \{\
+  pthread_t tid1, tid2;\
+  pthread_cond_init(&prod, NULL);\
+  pthread_cond_init(&cons, NULL);\
+  pthread_mutex_init(&mtx, NULL);\
+  pthread_create(&tid1, NULL, (void*)producer, NULL);\
+  pthread_create(&tid2, NULL, (void*)consumer, NULL);\
+  pthread_join(tid1, NULL);\
+  pthread_join(tid2, NULL);\
+  printf("Main: all done!\\n");\
+\}}
